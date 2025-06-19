@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CONDA_NAME="${1:-sparky}"
+
+echo
+echo "******************************************"
+echo "⚙️ Creating conda environment: $CONDA_NAME"
+echo "******************************************"
+echo
+
+conda init zsh

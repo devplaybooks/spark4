@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+CONDA_NAME="${1:-sparky}"
+
+conda create --name "${CONDA_NAME}" python=3.12.11 -y
+
+# source ~/.asdf/plugins/spark/set-spark-home.zsh
+
+spark_home_path="$(asdf where spark)"
+
+if [[ -n "${spark_home_path}" ]]; then
+  export SPARK_HOME
+  SPARK_HOME="${spark_home_path}"
+fi
+
+conda activate "${CONDA_NAME}"
+
+pip install pyspark==4.0.0
+
+conda install -c conda-forge jupyterlab
+
+conda install -c conda-forge python-lsp-server
+conda install -c conda-forge::jedi
+conda install -c conda-forge jedi-language-server
+
+echo
+echo "************************************"
+echo "⚙️ SPARK_HOME is set to: $SPARK_HOME"
+echo "⚙️  JAVA_HOME is set to: $JAVA_HOME"
+echo "************************************"
+echo
+
+spark-submit --version
