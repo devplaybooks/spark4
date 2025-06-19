@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+CONDA_NAME="${1:-sparky}"
+
+conda remove -n "${CONDA_NAME}" --all

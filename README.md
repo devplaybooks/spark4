@@ -6,7 +6,12 @@
 
 ---
 
-# Base Template for Dev Playbooks
+# Apache Spark 4 Dev Playbooks
+
+Leverages [asdf](https://asdf-vm.com/) for required versions of 
+[Apache Spark](https://spark.apache.org/), Python 
+[Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), Java & Scala. 
+See [.tool-versions](./.tool-versions) for the specific versions.
 
 Includes:
 
