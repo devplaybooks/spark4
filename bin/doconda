@@ -8,7 +8,7 @@ echo "⚙️ Creating conda environment: $CONDA_NAME"
 echo "******************************************"
 echo
 
-conda init
+conda init zsh
 conda create --name "${CONDA_NAME}" python=3.12.11 -y
 
 # source ~/.asdf/plugins/spark/set-spark-home.zsh
@@ -20,16 +20,13 @@ if [[ -n "${spark_home_path}" ]]; then
   SPARK_HOME="${spark_home_path}"
 fi
 
-
 conda activate "${CONDA_NAME}"
 
 conda install jupyterlab
 
+conda install -c conda-forge python-lsp-server
 conda install -c conda-forge::jedi
 conda install -c conda-forge jedi-language-server
-conda install -c conda-forge python-language-server
-conda install -c conda-forge python-lsp-server
-
 
 echo
 echo "************************************"

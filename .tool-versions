@@ -1,5 +1,5 @@
 nodejs 24.2.0
-java openjdk-24.0.1
+java openjdk-21.0.2
 python miniconda3-3.12-25.1.1-2
-scala 3.7.1
+scala 2.13.16
 spark 4.0.0
