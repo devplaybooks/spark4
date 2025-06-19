@@ -13,7 +13,11 @@ Leverages [asdf](https://asdf-vm.com/) for required versions of
 [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), Java & Scala. 
 See [.tool-versions](./.tool-versions) for the specific versions.
 
-Includes:
+## Resources
+
+- [PySpark Cheat Sheet](https://cartershanklin.github.io/pyspark-cheatsheet/)
+
+## Includes:
 
 * [Actions Blank CI Starter Workglow](https://github.com/actions/starter-workflows/blob/main/ci/blank.yml)
 * [bnb's](https://github.com/bnb) [Codespaces Base Starter](https://github.com/codespaces-examples/base)
