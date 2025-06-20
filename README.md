@@ -13,7 +13,23 @@ Leverages [asdf](https://asdf-vm.com/) for required versions of
 [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), Java & Scala. 
 See [.tool-versions](./.tool-versions) for the specific versions.
 
+## TL;DR
 
+```shell
+asdf install
+doinit
+doactivate
+dojupyter
+```
+
+To clean up:
+
+```shell
+dodeactivate
+nukeit
+```
+
+``````
 
 ## Resources
 
