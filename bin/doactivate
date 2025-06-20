@@ -4,18 +4,22 @@ CONDA_NAME="${1:-sparky}"
 
 conda create --name "${CONDA_NAME}" python=3.12.11 -y
 
+###########################################################
+# Set $SPARK_HOME
 # source ~/.asdf/plugins/spark/set-spark-home.zsh
-
 spark_home_path="$(asdf where spark)"
 
 if [[ -n "${spark_home_path}" ]]; then
   export SPARK_HOME
   SPARK_HOME="${spark_home_path}"
 fi
+#
+###########################################################
 
 conda activate "${CONDA_NAME}"
 
-pip install pyspark[connect]==4.0.0   # https://spark.apache.org/docs/latest/api/python/getting_started/install.html#spark-connect
+# https://spark.apache.org/docs/latest/api/python/getting_started/install.html#spark-connect
+pip install pyspark[connect]==4.0.0
 
 conda install -c conda-forge jupyterlab
 

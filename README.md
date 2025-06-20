@@ -1,4 +1,4 @@
-[![Build and Test](https://github.com/devplaybooks/.baseline/actions/workflows/CI.yml/badge.svg)](https://github.com/devplaybooks/.baseline/actions/workflows/CI.yml)
+[![Build and Test](https://github.com/devplaybooks/spark4/actions/workflows/CI.yml/badge.svg)](https://github.com/devplaybooks/spark4/actions/workflows/CI.yml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](LICENSE-APACHE)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE-GPLv3)
@@ -6,12 +6,14 @@
 
 ---
 
-# Apache Spark 4 Dev Playbooks
+# Apache Spark 4 Dev Playbook (Work in Progress)
 
 Leverages [asdf](https://asdf-vm.com/) for required versions of 
 [Apache Spark](https://spark.apache.org/), Python 
 [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), Java & Scala. 
 See [.tool-versions](./.tool-versions) for the specific versions.
+
+
 
 ## Resources
 

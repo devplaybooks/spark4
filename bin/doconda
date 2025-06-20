@@ -9,24 +9,30 @@ echo "******************************************"
 echo
 
 conda init zsh
+
 conda create --name "${CONDA_NAME}" python=3.12.11 -y
 
+###########################################################
+# Set $SPARK_HOME
 # source ~/.asdf/plugins/spark/set-spark-home.zsh
-
 spark_home_path="$(asdf where spark)"
 
 if [[ -n "${spark_home_path}" ]]; then
   export SPARK_HOME
   SPARK_HOME="${spark_home_path}"
 fi
+#
+###########################################################
 
-conda activate "${CONDA_NAME}"
+conda init zsh && conda activate "${CONDA_NAME}"
 
-conda install jupyterlab
+# https://spark.apache.org/docs/latest/api/python/getting_started/install.html#spark-connect
+pip install pyspark[connect]==4.0.0
 
-conda install -c conda-forge python-lsp-server
-conda install -c conda-forge::jedi
+conda install -c conda-forge jupyterlab
+
 conda install -c conda-forge jedi-language-server
+conda install -c conda-forge python-lsp-server
 
 echo
 echo "************************************"
@@ -37,4 +43,12 @@ echo
 
 spark-submit --version
 
+if command -v cargo >/dev/null 2>&1; then
+  echo "Rust detected. Installing Rust Jupyter support..."
+  conda install -c conda-forge rust
+  cargo install evcxr_jupyter
+  evcxr_jupyter --install
+fi
 
+export SPARK_LOCAL_IP=127.0.0.1
+jupyter lab
