@@ -17,9 +17,14 @@ See [.tool-versions](./.tool-versions) for the specific versions.
 
 ```shell
 asdf install
-doinit
-doactivate
-dojupyter
+bin/doinit
+```
+
+Now, in a new shell:
+
+```shell
+bin/doactivate
+bin/dojupyter
 ```
 
 To clean up:

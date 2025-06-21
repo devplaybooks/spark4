@@ -9,9 +9,15 @@ conda create --name "${CONDA_NAME}" python=3.12.11 -y
 # source ~/.asdf/plugins/spark/set-spark-home.zsh
 spark_home_path="$(asdf where spark)"
 
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 if [[ -n "${spark_home_path}" ]]; then
   export SPARK_HOME
   SPARK_HOME="${spark_home_path}"
+
+  echo "copying log4j.properties to ${SPARK_HOME}/conf"
+  cp "${script_dir}/conf/log4j2.properties" "${SPARK_HOME}/conf/log4j2.properties"
+  cat "${SPARK_HOME}/conf/log4j2.properties"
 fi
 #
 ###########################################################
@@ -22,7 +28,6 @@ conda activate "${CONDA_NAME}"
 pip install pyspark[connect]==4.0.0
 
 conda install -c conda-forge jupyterlab
-
 conda install -c conda-forge jedi-language-server
 conda install -c conda-forge python-lsp-server
 
