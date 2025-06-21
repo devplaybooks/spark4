@@ -14,7 +14,7 @@ check_for_req() {
     fi
 }
 
-check_for_req "ly"
+check_for_req "lilypond"
 check_for_req "fluidsynth"
 
 pip install abjad

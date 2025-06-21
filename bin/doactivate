@@ -22,14 +22,33 @@ fi
 #
 ###########################################################
 
-conda activate "${CONDA_NAME}"
+# conda activate "${CONDA_NAME}"
 
 # https://spark.apache.org/docs/latest/api/python/getting_started/install.html#spark-connect
 pip install pyspark[connect]==4.0.0
+pip install ipython prompt_toolkit
+pip install freetype-py fontconfig-py
 
 conda install -c conda-forge jupyterlab
 conda install -c conda-forge jedi-language-server
 conda install -c conda-forge python-lsp-server
+
+# Rust
+if command -v cargo >/dev/null 2>&1; then
+  echo "Rust detected. Installing Rust Jupyter support..."
+  conda install -c conda-forge rust
+  cargo install evcxr_jupyter
+  evcxr_jupyter --install
+fi
+
+# GNU Octave / Xeus
+# https://github.com/jupyter-xeus/xeus-octave/
+if command -v octave >/dev/null 2>&1; then
+  echo "Installing Xeus Octave Jupyter kernel..."
+  conda install -c conda-forge xeus-octave
+fi
+
+conda activate "${CONDA_NAME}"
 
 echo
 echo "************************************"
