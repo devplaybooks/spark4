@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+###########################################################
+# Lilypond Jupyter Fun
+#
+# https://abjad.github.io/
+# https://www.grahamwheeler.com/post/using-jupyter-as-a-music-notebook/
+# https://github.com/FluidSynth/fluidsynth
+
+check_for_req() {
+    if ! command -v "$1" >/dev/null 2>&1; then
+        echo "Error: $1 not found."
+        exit 1
+    fi
+}
+
+check_for_req "ly"
+check_for_req "fluidsynth"
+
+pip install abjad
