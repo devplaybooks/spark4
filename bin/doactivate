@@ -29,6 +29,7 @@ pip install pyspark[connect]==4.0.0
 pip install ipython prompt_toolkit
 pip install freetype-py fontconfig-py
 
+conda install -c conda-forge ijava
 conda install -c conda-forge jupyterlab
 conda install -c conda-forge jedi-language-server
 conda install -c conda-forge python-lsp-server

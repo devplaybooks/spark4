@@ -34,11 +34,11 @@ dodeactivate
 nukeit
 ```
 
-``````
-
 ## Resources
 
 - [PySpark Cheat Sheet](https://cartershanklin.github.io/pyspark-cheatsheet/)
+- [Conda Forge](https://conda-forge.org/)
+  - [IJava](https://github.com/JaneliaSciComp/IJava)
 
 ## Includes:
 
