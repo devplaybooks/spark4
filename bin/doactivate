@@ -49,6 +49,10 @@ if command -v octave >/dev/null 2>&1; then
   conda install -c conda-forge xeus-octave
 fi
 
+# Scala / Almond Support
+# https://almond.sh/
+coursier launch --fork almond -- --install
+
 conda activate "${CONDA_NAME}"
 
 echo
