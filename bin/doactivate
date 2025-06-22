@@ -34,6 +34,11 @@ conda install -c conda-forge jupyterlab
 conda install -c conda-forge jedi-language-server
 conda install -c conda-forge python-lsp-server
 
+# https://github.com/jupyter-widgets
+conda install -c conda-forge ipywidgets
+conda install -c conda-forge ipydatagrid
+conda install -c conda-forge sidecar
+
 # Rust
 if command -v cargo >/dev/null 2>&1; then
   echo "Rust detected. Installing Rust Jupyter support..."
