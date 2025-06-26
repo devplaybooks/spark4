@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-conda install -c conda-forge rust
-cargo install evcxr_jupyter
-evcxr_jupyter --install
+if command -v cargo >/dev/null 2>&1; then
+  echo "⚙️ Rust detected. Installing Rust Jupyter support..."
+  conda install -c conda-forge rust
+  cargo install evcxr_jupyter
+  evcxr_jupyter --install
+else
+  echo "⚙️ Rust not detected. Skipping Rust Jupyter support installation."
+fi
