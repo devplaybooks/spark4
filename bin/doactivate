@@ -32,12 +32,7 @@ pip install freetype-py fontconfig-py
 conda install -c conda-forge ijava
 conda install -c conda-forge jupyterlab
 conda install -c conda-forge jedi-language-server
-conda install -c conda-forge python-lsp-server
-
-# https://github.com/jupyter-widgets
-conda install -c conda-forge ipywidgets
-conda install -c conda-forge ipydatagrid
-conda install -c conda-forge sidecar
+#conda install -c conda-forge python-lsp-server
 
 conda activate "${CONDA_NAME}"
 
