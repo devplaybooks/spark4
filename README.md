@@ -6,46 +6,28 @@
 
 ---
 
-# Apache Spark 4 Dev Playbook (Work in Progress)
+# Jupyter All Spark Notebook
 
-Leverages [asdf](https://asdf-vm.com/) for required versions of 
-[Apache Spark](https://spark.apache.org/), Python 
-[Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), Java & Scala. 
-See [.tool-versions](./.tool-versions) for the specific versions.
+A [Docker Compose](https://docs.docker.com/compose/)
+[Jupyter notebook](https://docs.jupyter.org/en/latest/) image with
+[Apache Spark](https://spark.apache.org/),
+[PySpark 3.5.0](https://spark.apache.org/docs/3.5.0/api/python/index.html), and
+[JupyterLab](https://github.com/jupyterlab/jupyterlab).
 
 ## TL;DR
 
 ```shell
-asdf install
-bin/doinit
+docker compose up
 ```
-
-Now, in a new shell:
+To run in the background:
 
 ```shell
-bin/doactivate
-bin/dojupyter
-```
-
-To clean up:
-
-```shell
-dodeactivate
-nukeit
+docker-compose up -d
 ```
 
 ## Resources
 
+- [hub.docker.com/r/jupyter/all-spark-notebook](https://hub.docker.com/r/jupyter/all-spark-notebook)
+- [Data science with JupyterLab](https://docs.docker.com/guides/jupyter/#run-and-access-a-jupyterlab-container)
+- [Supercharging AI/ML Development with JupyterLab and Docker](https://www.docker.com/blog/supercharging-ai-ml-development-with-jupyterlab-and-docker/)
 - [PySpark Cheat Sheet](https://cartershanklin.github.io/pyspark-cheatsheet/)
-- [Conda Forge](https://conda-forge.org/)
-  - [IJava](https://github.com/JaneliaSciComp/IJava)
-
-## Includes:
-
-* [Actions Blank CI Starter Workglow](https://github.com/actions/starter-workflows/blob/main/ci/blank.yml)
-* [bnb's](https://github.com/bnb) [Codespaces Base Starter](https://github.com/codespaces-examples/base)
-* Choice of licenses:
-    * [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-    * [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
-    * [MIT License](https://opensource.org/license/mit/)
-* [Shields.io](https://shields.io/) [Badges](https://github.com/badges/shields)
