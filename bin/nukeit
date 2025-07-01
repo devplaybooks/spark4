@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-CONDA_NAME="${1:-sparky}"
-
-conda remove -n "${CONDA_NAME}" --all
-
-asdf uninstall python miniconda3-3.12-25.1.1-2
