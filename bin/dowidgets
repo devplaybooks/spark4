@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# https://github.com/jupyter-widgets
-#conda install -c conda-forge ipywidgets
-#conda install -c conda-forge ipydatagrid
-#conda install -c conda-forge sidecar

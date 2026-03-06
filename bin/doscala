@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-# Scala / Almond Support
-# https://almond.sh/
-coursier launch --fork almond -- --install

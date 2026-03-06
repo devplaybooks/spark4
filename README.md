@@ -6,46 +6,43 @@
 
 ---
 
-# Apache Spark 4 Dev Playbook (Work in Progress)
+# Jupyter All Spark Notebook
 
-Leverages [asdf](https://asdf-vm.com/) for required versions of 
-[Apache Spark](https://spark.apache.org/), Python 
-[Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main), Java & Scala. 
-See [.tool-versions](./.tool-versions) for the specific versions.
+A [Docker Compose](https://docs.docker.com/compose/)
+[Jupyter notebook](https://docs.jupyter.org/en/latest/) image with
+[Apache Spark](https://spark.apache.org/),
+[PySpark 3.5.0](https://spark.apache.org/docs/3.5.0/api/python/index.html),
+[JupyterLab](https://github.com/jupyterlab/jupyterlab), and
+[Rust](https://www.rust-lang.org/) support.
 
 ## TL;DR
 
 ```shell
-asdf install
-bin/doinit
+docker compose build
+docker compose up
 ```
-
-Now, in a new shell:
+To run in the background:
 
 ```shell
-bin/doactivate
-bin/dojupyter
+docker-compose up -d
 ```
 
-To clean up:
+Access JupyterLab at http://localhost:8888
 
-```shell
-dodeactivate
-nukeit
-```
+## Features
+
+- **Python & PySpark**: Full data processing and analysis with Apache Spark
+- **Rust Support**: Interactive Rust notebooks and Python-Rust integration via PyO3 and maturin
+- **JupyterLab**: Modern notebook interface with multiple kernels
+
+## Rust Integration
+
+This image includes Rust support for building high-performance extensions and working with Rust alongside PySpark. See [RUST_SUPPORT.md](RUST_SUPPORT.md) for detailed documentation.
 
 ## Resources
 
+- [hub.docker.com/r/jupyter/all-spark-notebook](https://hub.docker.com/r/jupyter/all-spark-notebook)
+- [Data science with JupyterLab](https://docs.docker.com/guides/jupyter/#run-and-access-a-jupyterlab-container)
+- [Supercharging AI/ML Development with JupyterLab and Docker](https://www.docker.com/blog/supercharging-ai-ml-development-with-jupyterlab-and-docker/)
 - [PySpark Cheat Sheet](https://cartershanklin.github.io/pyspark-cheatsheet/)
-- [Conda Forge](https://conda-forge.org/)
-  - [IJava](https://github.com/JaneliaSciComp/IJava)
-
-## Includes:
-
-* [Actions Blank CI Starter Workglow](https://github.com/actions/starter-workflows/blob/main/ci/blank.yml)
-* [bnb's](https://github.com/bnb) [Codespaces Base Starter](https://github.com/codespaces-examples/base)
-* Choice of licenses:
-    * [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-    * [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
-    * [MIT License](https://opensource.org/license/mit/)
-* [Shields.io](https://shields.io/) [Badges](https://github.com/badges/shields)
+- [Rust Support Guide](RUST_SUPPORT.md)
