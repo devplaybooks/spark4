@@ -1,8 +1,6 @@
 services:
   jupyterlab:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: folkengine/spark4:latest
     ports:
       - "8888:8888"
     environment:
