@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/christoph/src/github.com/devplaybooks/spark4 log --oneline)",
+      "Bash(git:*)",
+      "Bash(python -m pytest tests/ -v)"
+    ]
+  }
+}
