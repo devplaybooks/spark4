@@ -194,4 +194,5 @@ cython_debug/
 .cursorindexingignore
 
 # Added
+.claude/
 .virtual_documents/
