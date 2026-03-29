@@ -39,6 +39,40 @@ Access JupyterLab at http://localhost:8888
 
 This image includes Rust support for building high-performance extensions and working with Rust alongside PySpark. See [RUST_SUPPORT.md](RUST_SUPPORT.md) for detailed documentation.
 
+## Contributing
+
+### Prerequisites
+
+Install [asdf](https://asdf-vm.com/), then add the required plugins and install all tool versions:
+
+```shell
+asdf plugin add python
+asdf plugin add java
+asdf plugin add nodejs
+asdf plugin add scala
+asdf plugin add spark
+asdf plugin add sbt
+asdf plugin add coursier
+asdf install
+```
+
+This will provision the exact versions defined in `.tool-versions`.
+
+### Running Tests
+
+```shell
+pip install -r requirements.txt
+pytest
+```
+
+### Running Locally with Docker
+
+```shell
+docker compose up
+```
+
+Access JupyterLab at http://localhost:8888. Notebooks in `./notebooks` are mounted automatically.
+
 ## Resources
 
 - [hub.docker.com/r/jupyter/all-spark-notebook](https://hub.docker.com/r/jupyter/all-spark-notebook)
