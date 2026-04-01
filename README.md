@@ -12,9 +12,11 @@
 A [Docker Compose](https://docs.docker.com/compose/)
 [Jupyter notebook](https://docs.jupyter.org/en/latest/) image with
 [Apache Spark](https://spark.apache.org/),
-[PySpark 3.5.0](https://spark.apache.org/docs/3.5.0/api/python/index.html),
+[PySpark 4.1.1](https://spark.apache.org/docs/4.1.1/api/python/index.html),
 [JupyterLab](https://github.com/jupyterlab/jupyterlab), and
 [Rust](https://www.rust-lang.org/) support.
+
+Based on the [quay.io/jupyter/all-spark-notebook](https://quay.io/repository/jupyter/all-spark-notebook) image.
 
 ## TL;DR
 
@@ -76,7 +78,7 @@ Access JupyterLab at http://localhost:8888. Notebooks in `./notebooks` are mount
 
 ## Resources
 
-- [hub.docker.com/r/jupyter/all-spark-notebook](https://hub.docker.com/r/jupyter/all-spark-notebook)
+- [quay.io/jupyter/all-spark-notebook](https://quay.io/repository/jupyter/all-spark-notebook)
 - [Data science with JupyterLab](https://docs.docker.com/guides/jupyter/#run-and-access-a-jupyterlab-container)
 - [Supercharging AI/ML Development with JupyterLab and Docker](https://www.docker.com/blog/supercharging-ai-ml-development-with-jupyterlab-and-docker/)
 - [PySpark Cheat Sheet](https://cartershanklin.github.io/pyspark-cheatsheet/)
