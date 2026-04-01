@@ -6,7 +6,7 @@ This file provides context and coding guidance for Claude when working in the **
 
 - **Container**: Custom image built on `jupyter/all-spark-notebook:latest` via Docker Compose
 - **Languages**: Python (primary), Rust (via evcxr Jupyter kernel)
-- **Framework**: Apache Spark 3.5.0 / PySpark
+- **Framework**: Apache Spark 4.1.1 / PySpark
 - **IDE**: JupyterLab (port 8888)
 - **Build**: `docker compose build && docker compose up`
 
@@ -155,7 +155,7 @@ Before suggesting or finalising any code, verify:
 - [ ] Docstrings present on all functions and classes
 - [ ] Errors handled explicitly
 - [ ] Complex logic is commented
-- [ ] Compatible with Spark 3.5.0 / PySpark
+- [ ] Compatible with Spark 4.1.1 / PySpark
 - [ ] Uses container paths (`/home/jovyan/work/`) not host paths
 - [ ] Notebook cells are ordered and independently reproducible
 
